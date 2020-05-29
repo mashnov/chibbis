@@ -8,11 +8,9 @@
       <DefaultLayoutHeader />
     </div>
     <div class="default-layout__content">
-      <div class="container-fluid">
-        <slot>
-          <nuxt />
-        </slot>
-      </div>
+      <slot>
+        <nuxt />
+      </slot>
     </div>
   </div>
 </template>
@@ -82,32 +80,11 @@ export default {
     pointer-events: none;
   }
   .default-layout__header {
-    position: fixed;
+    position: relative;
     width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
   }
   .default-layout__content {
     display: block;
     width: 100%;
-    padding: 70px 0 15px 0;
-  }
-  @media (min-width: $screen-sm) {
-    .default-layout__content {
-      padding: 80px 15px 15px 15px;
-    }
-  }
-  @media (min-width: $screen-md) {
-    .default-layout__content {
-      padding: 90px 15px 15px 15px;
-    }
-  }
-  @media (min-width: $screen-xl) {
-    .default-layout__content {
-      width: calc(100% - 114px);
-      margin-left: 114px;
-      padding: 110px 30px 30px 30px;
-    }
   }
 </style>

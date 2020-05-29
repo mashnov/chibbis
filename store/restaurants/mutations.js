@@ -10,4 +10,7 @@ export default {
   [MODULE.MUTATE_HITS]: (state, hits) => {
     state.hits = hits;
   },
+  [MODULE.MUTATE_FILTER_VALUE]: (state, filterValue) => {
+    state.filterValue = filterValue;
+  },
 };

@@ -19,7 +19,7 @@
 
   export default {
     name: 'Preloader',
-    component: {
+    components: {
       PreloaderIcon,
     },
     computed: {

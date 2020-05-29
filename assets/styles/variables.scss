@@ -6,6 +6,11 @@ $color-gray-super-light: #F8F9FB;
 $color-white: #fff;
 $color-overlay: rgba(0, 0, 0, 0.4);
 $color-orange: #f7a83f;
+$color-green: #a1f73f;
+$color-red: #f73f3f;
+$background-start: #464545;
+$background-stop: #221F1F;
+$background: linear-gradient(135deg, $background-start 0%, $background-stop 100%);
 
 $screen-xs: map-get($grid-breakpoints, 'xs');
 $screen-sm: map-get($grid-breakpoints, 'sm');
@@ -13,6 +18,7 @@ $screen-md: map-get($grid-breakpoints, 'md');
 $screen-lg: map-get($grid-breakpoints, 'lg');
 $screen-xl: map-get($grid-breakpoints, 'xl');
 
+$animationEasing: cubic-bezier(0.5, 0, 0.5 ,1);
 $modalAnimationEasing: cubic-bezier(0.5, 0, 0.5 ,1);
 $modalAnimationTimeIn: 0.3s;
 $modalAnimationTimeOut: 0.2s;

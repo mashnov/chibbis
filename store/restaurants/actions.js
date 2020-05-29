@@ -1,3 +1,6 @@
+import cloneDeep from 'lodash/cloneDeep';
+import set from 'lodash/set';
+
 import MODULE from './types';
 import { PRELOADER } from '~/store/types';
 import Api from './api';
@@ -29,5 +32,10 @@ export default {
     const hits = await Api[MODULE.FETCH_HITS].call(this);
     commit(MODULE.MUTATE_HITS, hits);
     dispatch(hidePreloaderActionName, preloaderId, { root: true });
+  },
+  [MODULE.SET_FILTER_VALUE]({ commit, state }, { field, value }) {
+    const filterValue = cloneDeep(state.filterValue);
+    const updatedValue = set(filterValue, field, value);
+    commit(MODULE.MUTATE_FILTER_VALUE, updatedValue);
   },
 };

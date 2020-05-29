@@ -5,8 +5,8 @@ const appDescription = '';
 
 const defaultImageWidth = '1200';
 const defaultImageHeight = '630';
-const defaultPageTitle = 'chibbis';
-const defaultDescription = 'chibbis - Заказ еды с доставкой';
+const defaultPageTitle = 'Заказ еды с доставкой';
+const defaultDescription = 'Chibbis - Заказ еды с доставкой';
 const defaultCanonical = 'https://chibbis.ru';
 const defaultDomain = 'chibbis.ru/';
 const defaultShareImage = 'https://static.chibbis.ru/Content/img/optimized/bird-icon-3.jpg';

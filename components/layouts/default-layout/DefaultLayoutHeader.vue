@@ -1,10 +1,16 @@
 <template>
   <div class="default-layout-header">
-    <nuxt-link
-      :to="logoLink"
-    >
-      <logoIcon />
-    </nuxt-link>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <nuxt-link
+            :to="logoLink"
+          >
+            <logoIcon />
+          </nuxt-link>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -34,17 +40,15 @@
     flex-wrap: wrap;
     width: 100%;
     padding: 10px;
-    background-color: $color-white;
-    opacity: 0.98;
+    background-color: $background-stop;
   }
   .default-layout-header a {
-    color: $color-black;
     text-decoration: none;
   }
   .default-layout-header svg {
     display: block;
     height: 40px;
-    color: $color-black;
+    color: $color-orange;
   }
   @media (min-width: $screen-sm) {
     .default-layout-header svg {

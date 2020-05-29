@@ -4,4 +4,5 @@ export default {
   [MODULE.GET_RESTAURANTS]: ({ restaurants }) => (restaurants),
   [MODULE.GET_REVIEWS]: ({ reviews }) => (reviews),
   [MODULE.GET_HITS]: ({ hits }) => (hits),
+  [MODULE.GET_FILTER_VALUE]: ({ filterValue }) => (filterValue),
 };
