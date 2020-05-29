@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  appearance: none;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Source Code Pro', monospace;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  background-color: $color-gray-super-light;
+}
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: $color-white;
+  background: $color-orange
+}

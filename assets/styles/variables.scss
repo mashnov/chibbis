@@ -1,0 +1,18 @@
+$color-black: #000;
+$color-gray-dark: #6E787D;
+$color-gray-middle: #A2ACB6;
+$color-gray-light: #E0E4E8;
+$color-gray-super-light: #F8F9FB;
+$color-white: #fff;
+$color-overlay: rgba(0, 0, 0, 0.4);
+$color-orange: #f7a83f;
+
+$screen-xs: map-get($grid-breakpoints, 'xs');
+$screen-sm: map-get($grid-breakpoints, 'sm');
+$screen-md: map-get($grid-breakpoints, 'md');
+$screen-lg: map-get($grid-breakpoints, 'lg');
+$screen-xl: map-get($grid-breakpoints, 'xl');
+
+$modalAnimationEasing: cubic-bezier(0.5, 0, 0.5 ,1);
+$modalAnimationTimeIn: 0.3s;
+$modalAnimationTimeOut: 0.2s;

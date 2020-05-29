@@ -1,0 +1,39 @@
+.fade-enter {
+  opacity: 0;
+}
+.fade-leave-active {
+  opacity: 0;
+}
+
+.modal-default {
+  will-change: transform;
+
+  &-enter-active {
+    animation: scaleIn $modalAnimationTimeIn $modalAnimationEasing;
+  }
+  &-leave-active {
+    animation: scaleIn $modalAnimationTimeOut $modalAnimationEasing reverse;
+  }
+}
+
+.modal-right {
+  will-change: transform;
+
+  &-enter-active {
+    animation: moveRight $modalAnimationTimeIn $modalAnimationEasing;
+  }
+  &-leave-active {
+    animation: moveRight $modalAnimationTimeOut $modalAnimationEasing reverse;
+  }
+}
+
+.modal-bottom {
+  will-change: transform;
+
+  &-enter-active {
+    animation: moveBottom $modalAnimationTimeIn $modalAnimationEasing;
+  }
+  &-leave-active {
+    animation: moveBottom $modalAnimationTimeOut $modalAnimationEasing reverse;
+  }
+}
