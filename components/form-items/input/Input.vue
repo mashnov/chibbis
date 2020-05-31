@@ -1,19 +1,10 @@
 <template>
-  <div
-    class="input"
-    :class="[
-      disabled && 'input_disabled',
-    ]"
-  >
+  <div class="input">
     <label>
       <input
-        ref="input"
         :value="value"
         :type="type"
         :placeholder="placeholder"
-        :disabled="disabled"
-        @blur="blurHandler"
-        @focus="focusHandler"
         @input="inputHandler"
       />
     </label>
@@ -41,18 +32,7 @@
         default: false,
       },
     },
-    data() {
-      return {
-        isFocused: false,
-      };
-    },
     methods: {
-      blurHandler() {
-        this.$emit('blur');
-      },
-      focusHandler() {
-        this.$emit('focus');
-      },
       inputHandler({ target: { value } }) {
         this.$emit('input', value);
       },
@@ -66,10 +46,6 @@
     background: transparent;
     border: none;
     transition: opacity 0.3s $animationEasing;
-  }
-  .input_disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
   }
   .input input {
     display: block;
