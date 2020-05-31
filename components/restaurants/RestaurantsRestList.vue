@@ -7,7 +7,7 @@
     </div>
     <div class="row">
       <div
-        v-for="(item, index) in restaurants"
+        v-for="(item, index) in filteredList"
         :key="index"
         class="col-12 col-sm-6 col-md-12"
       >
@@ -35,10 +35,22 @@
     computed: {
       ...mapGetters('restaurants', {
         restaurants: RESTAURANTS.GET_RESTAURANTS,
+        filterValue: RESTAURANTS.GET_FILTER_VALUE,
       }),
       ...mapGetters('references', {
         i18n: REFERENCES.GET_I18N,
       }),
+      filteredList() {
+        const { filterValue, restaurants } = this;
+        return restaurants.filter((item) => {
+          const restName = item.name.toLowerCase();
+          const restSpec = item.spec;
+          const specIsSet = filterValue.spec.length;
+          const isName = restName.includes(filterValue.text.toLowerCase());
+          const isSpec = specIsSet ? restSpec.some((r) => filterValue.spec.indexOf(r) >= 0) : true;
+          return isName && isSpec;
+        });
+      },
     },
   };
 </script>
