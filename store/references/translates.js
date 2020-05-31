@@ -9,4 +9,6 @@ export default {
   deliveryTime: 'Время доставки',
   currency: '₽',
   reviewAboutRestaurants: 'о ресторане',
+  filterModalCancel: 'Отмена',
+  filterModalApply: 'Применить',
 };

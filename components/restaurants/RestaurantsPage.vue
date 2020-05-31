@@ -5,10 +5,12 @@
     </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="d-none d-md-flex col-md-3">
-          <RestaurantsFilters />
+        <div class="d-none d-md-flex col-md-5 col-lg-4 col-xl-3">
+          <RestaurantsSidebar>
+            <RestaurantsFilters />
+          </RestaurantsSidebar>
         </div>
-        <div class="col-12 col-md-9">
+        <div class="col-12 col-md-7 col-lg-8 col-xl-9">
           <RestaurantsRestList />
         </div>
       </div>
@@ -26,6 +28,7 @@
 
 <script>
   import RestaurantsSearch from './RestaurantsSearch';
+  import RestaurantsSidebar from './RestaurantsSidebar';
   import RestaurantsFilters from './RestaurantsFilters';
   import RestaurantsRestList from './RestaurantsRestList';
   import RestaurantsHitList from './RestaurantsHitList';
@@ -39,6 +42,7 @@
       RestaurantsRestList,
       RestaurantsHitList,
       RestaurantsReviewList,
+      RestaurantsSidebar,
     },
   };
 </script>

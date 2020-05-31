@@ -13,4 +13,7 @@ export default {
   [MODULE.MUTATE_FILTER_VALUE]: (state, filterValue) => {
     state.filterValue = filterValue;
   },
+  [MODULE.MUTATE_SPEC_OPTIONS]: (state, specOptions) => {
+    state.specOptions = specOptions;
+  },
 };

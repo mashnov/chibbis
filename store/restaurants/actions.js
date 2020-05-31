@@ -1,4 +1,6 @@
 import cloneDeep from 'lodash/cloneDeep';
+import flatten from 'lodash/flatten';
+import uniq from 'lodash/uniq';
 import set from 'lodash/set';
 
 import MODULE from './types';
@@ -19,6 +21,7 @@ export default {
     dispatch(showPreloaderActionName, preloaderId, { root: true });
     const restaurants = await Api[MODULE.FETCH_RESTAURANTS].call(this);
     commit(MODULE.MUTATE_RESTAURANTS, restaurants);
+    dispatch(MODULE.SET_SPEC_OPTIONS, restaurants);
     dispatch(hidePreloaderActionName, preloaderId, { root: true });
   },
   async [MODULE.FETCH_REVIEWS]({ dispatch, commit }) {
@@ -37,5 +40,11 @@ export default {
     const filterValue = cloneDeep(state.filterValue);
     const updatedValue = set(filterValue, field, value);
     commit(MODULE.MUTATE_FILTER_VALUE, updatedValue);
+  },
+  [MODULE.SET_SPEC_OPTIONS]({ commit }, restaurants) {
+    const specs = restaurants.map((item) => (item.spec));
+    const specList = flatten(specs);
+    const specUniq = uniq(specList);
+    commit(MODULE.MUTATE_SPEC_OPTIONS, specUniq);
   },
 };

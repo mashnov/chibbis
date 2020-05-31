@@ -30,7 +30,7 @@
             :name="modalAnimationName"
           >
             <Component
-              :is="component"
+              :is="modalComponent"
               v-show="componentIsVisible"
               class="modal__container"
               :class="[
@@ -47,7 +47,6 @@
 </template>
 
 <script>
-  import cloneDeep from 'lodash/cloneDeep';
   import isNull from 'lodash/isNull';
   import { mapActions, mapGetters } from 'vuex';
   import { sleep } from '~/helpers/system';
@@ -57,7 +56,6 @@
     name: 'Modal',
     data() {
       return {
-        component: null,
         componentIsVisible: false,
       };
     },
@@ -87,7 +85,6 @@
     },
     watch: {
       modalComponent() {
-        this.setComponent();
         this.setVisibility();
       },
     },
@@ -95,10 +92,6 @@
       ...mapActions('modal', {
         hideModal: MODAL.HIDE_MODAL,
       }),
-      setComponent() {
-        const { modalComponent } = this;
-        this.component = cloneDeep(modalComponent);
-      },
       setVisibility() {
         const { modalComponent } = this;
         if (isNull(modalComponent)) {
@@ -128,6 +121,7 @@
     flex-wrap: wrap;
     align-items: center;
     background-color: $color-overlay;
+    backdrop-filter: blur(10px);
     top: 0;
     left: 0;
     width: 100%;
@@ -143,7 +137,7 @@
     padding: 12px 0;
   }
   .modal__container {
-    background: white;
+    background: $background-stop;
     padding-top: 48px;
     padding-bottom: 48px;
     border-radius: 24px;

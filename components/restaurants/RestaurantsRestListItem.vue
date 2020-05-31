@@ -143,7 +143,7 @@
       margin-right: 50px;
     }
     .restaurants-rest-list-item__name {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .restaurants-rest-list-item__spec {
       display: block;

@@ -62,7 +62,7 @@
   }
   @media (min-width: $screen-md) {
     .restaurants-rest-list {
-      margin: 40px 0;
+      margin: 40px 0 -20px 0;
     }
     .restaurants-rest-list__title {
       margin-bottom: 40px;

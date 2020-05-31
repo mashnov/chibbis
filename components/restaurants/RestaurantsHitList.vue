@@ -53,16 +53,16 @@
   }
   .restaurants-hit-list__title h2 {
     display: inline-block;
-    font-weight: 500;
+    font-weight: 400;
+    text-transform: uppercase;
     font-size: 21px;
     line-height: 23px;
     margin: 0 20px;
     color: $color-orange;
-    border-bottom: 1px solid $color-orange;
   }
   @media (min-width: $screen-md) {
     .restaurants-hit-list {
-      margin: 40px 0;
+      margin: 40px 0 -20px 0;
     }
     .restaurants-hit-list__title {
       margin-bottom: 40px;
