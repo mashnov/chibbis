@@ -1,4 +1,5 @@
 # Chibbis
+[DEMO](https://mashnov.github.io/chibbis/)
 
 ### Npm dev commands
 > - `npm run dev` - run it for development.  
