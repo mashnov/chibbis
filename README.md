@@ -95,3 +95,5 @@
 > - [Svgomg](https://jakearchibald.github.io/svgomg/)  
 > - [Bootstrap 4 Grid](https://getbootstrap.com/docs/4.0/layout/grid/)
 > - [VueDevTools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)  
+
+###### May 2020
