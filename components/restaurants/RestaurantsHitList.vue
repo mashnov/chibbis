@@ -1,5 +1,8 @@
 <template>
-  <div class="restaurants-hit-list">
+  <div
+    v-if="hits.length"
+    class="restaurants-hit-list"
+  >
     <div class="restaurants-hit-list__title">
       <h2>
         {{ i18n.hitListTitle }}

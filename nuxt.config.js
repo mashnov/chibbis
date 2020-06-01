@@ -8,6 +8,7 @@ const componentCacheOptions = require('./config/component-cache.config');
 const WebpackNotifierOptions = require('./config/webpack-notifier.config');
 const faviconOptions = require('./config/favicon.config');
 const styleResourcesOptions = require('./config/css-preload.config');
+const routerOptions = require('./config/router.config');
 const babelOptions = require('./babel.config');
 
 const generatedMeta = headOptions.generateMeta();
@@ -69,4 +70,5 @@ module.exports = {
       new WebpackNotifierPlugin(WebpackNotifierOptions),
     ],
   },
+  router: routerOptions,
 };

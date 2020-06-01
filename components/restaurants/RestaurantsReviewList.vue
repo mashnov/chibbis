@@ -1,5 +1,8 @@
 <template>
-  <div class="restaurants-review-list">
+  <div
+    v-if="reviews.length"
+    class="restaurants-review-list"
+  >
     <div class="restaurants-review-list__title">
       <h2>
         {{ i18n.reviewListTitle }}
