@@ -5,7 +5,7 @@ const mock = {
   componentClassName: '.input',
 };
 
-describe('Input', () => {
+describe('input', () => {
   it('Should render', () => {
     const wrapper = shallowMount(TestedComponent, {
       propsData: {

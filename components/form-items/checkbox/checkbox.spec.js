@@ -5,7 +5,7 @@ const mock = {
   componentClassName: '.checkbox',
 };
 
-describe('Checkbox', () => {
+describe('checkbox', () => {
   it('Should render', () => {
     const wrapper = shallowMount(TestedComponent, {
       propsData: {

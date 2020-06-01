@@ -5,7 +5,7 @@ const mock = {
   componentClassName: '.button',
 };
 
-describe('Button', () => {
+describe('button', () => {
   it('Should render', () => {
     const wrapper = shallowMount(TestedComponent);
     expect(wrapper.find(mock.componentClassName).exists()).toBe(true);
