@@ -54,7 +54,7 @@
     "jest-environment-jsdom-fifteen": "^1.0.2",
     "jest-transform-stub": "^2.0.0",
     "moxios": "^0.4.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.18.9",
     "nuxt-rfg-icon": "^0.6.4",
     "nuxt-svg-loader": "^1.2.0",
